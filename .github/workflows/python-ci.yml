@@ -3,10 +3,11 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: cheakoutcode
-        run: git clone https://github.com/Taeebhabibi/testci-cd.git
+      - uses: actions/checkout@v4
      
       - name: install python
+
+      
         run: sudo apt update && sudo apt install python3 -y
       - name: run tests
-        run: python test.py
+        run: python3 test.py
